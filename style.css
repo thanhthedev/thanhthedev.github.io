@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans+Narrow|Poppins');
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'PT Sans Narrow', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* reset to 0 */
+body {
+    background-color: lightgoldenrodyellow;
+}
+h1 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+}
+main {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    background-color: lightskyblue;
+
+}
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.2rem;
+    padding-top: 10px;
+}
+
+section {
+    border: 4px ridge darkblue;
+    padding: 20px;
+}
+
+section img {
+    width: 100px;
+}
+
+main h2 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+}
+
+#logo {
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+@keyframes colorize {
+    33% {
+        background-color: white;
+    }
+    66% {
+        border: 10px solid black;
+    }
+    100% {
+        background-color: lightgoldenrodyellow;
+    }
+}
+
+#logo:hover {
+    animation: colorize 5s linear;
+}
+
+#containerhobbies {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#hobbies i, 
+#emailme i, 
+#socialmedia i {
+    font-size: 100px;
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(1.1); 
+    }
+
+}
+#socialmedia a :hover {
+    animation: scale 1s linear forwards;
+}
+
+@keyframes spin { 
+    100% { 
+        transform: rotate(360deg); 
+    } 
+}
+
+#basketball:hover {
+    animation: spin 2s linear ;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%, 70% {
+        transform: translate3d(-2px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(3px, 0, 0);
+    }
+}
+
+#gaming:hover {
+    animation: shake 0.9s linear infinite;
+}
+/* https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
+
+/*Phones */
+@media screen and (max-width: 560px) {
+    main {
+        display:grid;
+        grid-template-columns: 100%;
+        margin: auto;
+        width: 80%;
+        text-align: center;
+        background-color: lightskyblue;
+    }
+}
+/* tablet and desktop wasnt needed because it still looks good */
